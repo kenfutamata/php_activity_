@@ -43,21 +43,21 @@ class student{
     }
 
     public function StudentName(){
-        echo "My Name is ". $this->getFname()." ". $this->getLname(); 
+        print_r("My Name is ". $this->getFname()." ". $this->getLname()."\n"); 
     }
 
     public function age(){
         $age = date('Y-M-D')-$this->getDob(); 
-        echo "My age is ".$age; 
+        print_r("My age is ".$age."\n"); 
     }
 
     public function address(){
-        echo "I live in".$this->getAddress().",".$this->getCity().",".$this->getZip(); 
+        print_r("I live in ".$this->getAddress().",".$this->getCity().",".$this->getZip()); 
     }
 }
-$student = new student($student); 
-$student->fname='Juan'; 
-$student ->lname = 'Tamad'; 
+$student =new student($student); 
+$student->fname= 'Juan'; 
+$student ->lname ='Tamad'; 
 $student->dob = "1970-1-1"; 
 $student ->address = "Brgy Looc";
 $student -> city = "Mandaue City"; 
