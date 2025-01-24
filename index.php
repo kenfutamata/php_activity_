@@ -1,28 +1,27 @@
 <?php
-
 class student{
     public $fname; 
     public $lname;
     public $dob;
 
-
-    public function __construct($student)
+    public function __construct($fname, $lname)
     {
-        $this->fname = $student->fname; 
-        $this->lname = $student->lname; 
+        $this->fname = $fname; 
+        $this->lname = $lname; 
     }
 
     public function getFname(){
-        return $this -> $fname;  
+        return $this -> fname;  
     }
 
     public function getLname(){
-        return $this -> $lname;  
+        return $this -> lname;  
     }
 
 
-    public function _toString(){
-        print_r("My Name is ". $this->getFname()." ". $this->getLname()."\n"); 
+    public function display()
+    {
+        echo "My Name is ". $this->fname." ". $this->lname."\n";   
     }
 
 }
@@ -40,7 +39,7 @@ class order{
     public $shipping_cost;
     public $discount;
 
-    public function __construct($order){
+    public function __construct($order_id, $student_id, $product_id, $order_date, $order_status, $total_amount, $ship_address, $payment_method, $shipping_cost, $discount){
         $this->order_id = $order_id;
         $this->student_id = $student_id;
         $this->product_id = $product_id;
@@ -66,22 +65,23 @@ class order{
         echo"Discount ".$this->discount."\n";
     }
 }
-$student =new student($student); 
-$student->fname= 'Juan'; 
-$student ->lname ='Tamad'; 
-$student->StudentName();
 
-$order = new order($order); 
-$order->order_id = 1; 
-$order->student_id = 1;
-$order->product_id = 1;
-$order->order_date = "1/1/1970";
-$order->order_status = "Delivered";
-$order->total_amount = "250";
-$order->ship_address = "250 Gibson Street";
-$order->payment_method = "card";
-$order->shippping_cost = 250;
-$order->order_id = True;
+ $fname = "Juan"; 
+ $lname = "Tamad"; 
+$student =new student($fname, $lname); 
+$student->display();
 
+$order_id = 1; 
+$student_id = 1; 
+$product_id = 1; 
+$order_date = "1/1/1970"; 
+$order_status = "Delivered"; 
+$total_amount = "250"; 
+$ship_address = "250 Gibson Street"; 
+$payment_method = "card";
+$shipping_cost = 250; 
+$discount = True; 
+
+$order = new order($order_id, $student_id, $product_id, $order_date, $order_status, $total_amount, $ship_address, $payment_method, $shipping_cost, $discount); 
 $order->display(); 
 ?>
