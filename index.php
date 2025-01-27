@@ -53,16 +53,16 @@ class order{
     }
 
     public function display(){
-        echo"Order id ".$this->order_id."\n";
-        echo"Student id ".$this->student_id."\n";
-        echo"Product id ".$this->product_id."\n";
-        echo"Order date ".$this->order_date."\n";
-        echo"Order status ".$this->order_status."\n";
-        echo"Total Amount ".$this->total_amount."\n";
-        echo"Shipping Address ".$this->ship_address."\n";
-        echo"Payment method ".$this->payment_method."\n";
-        echo"Shipping Cost ".$this->shipping_cost."\n";
-        echo"Discount ".$this->discount."\n";
+        echo"Order id ".$this->order_id."<br>";
+        echo"Student id ".$this->student_id."<br>";
+        echo"Product id ".$this->product_id."<br>";
+        echo"Order date ".$this->order_date."<br>";
+        echo"Order status ".$this->order_status."<br>";
+        echo"Total Amount ".$this->total_amount."<br>";
+        echo"Shipping Address ".$this->ship_address."<br>";
+        echo"Payment method ".$this->payment_method."<br>";
+        echo"Shipping Cost ".$this->shipping_cost."<br>";
+        echo"Discount ".$this->discount."<br>";
     }
 }
 
